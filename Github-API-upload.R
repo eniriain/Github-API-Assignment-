@@ -17,7 +17,7 @@ myapp <- oauth_app(appname = "ENIRIAIN",
 
 # Get OAuth credentials
 github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
-
+1
 # Use API
 gtoken <- config(token = github_token)
 req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
@@ -115,11 +115,11 @@ finalData$numberOfFollowers
 
 #Step3: Visualize the processed data from Github
 
-install.packages("devtools")
-install.packages("Rcpp")
+#install.packages("devtools")
+#install.packages("Rcpp")
 library(devtools)
 library(Rcpp)
-install_github('ramnathv/rCharts', force= TRUE)
+#install_github('ramnathv/rCharts', force= TRUE)
 require(rCharts)
 
 myPlot <- nPlot(numberOfFollowers ~ namesOfFollowers, data = finalData, type = "multiBarChart")
